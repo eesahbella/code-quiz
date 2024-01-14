@@ -22,6 +22,8 @@ var correctAnsw = questions.map(function (item) {
 
 var currentQuestionIndex = 0
 
+var secondsLeft = 60;
+
 //functions
 
 function startQuiz (){
@@ -59,9 +61,16 @@ function displayChoices(currentQuestionIndex){
         choices.appendChild(choiceButton);
         choiceButton.textContent = questionChoice[i];
         choiceButton.addEventListener("click", function() {
-            console.log("Selected choice:", questionChoice[i]);
-
-            nextQuestion();
+            // console.log("Selected choice:", questionChoice[i]);
+            if (questionChoice[i] === questions[currentQuestionIndex].answer){
+                console.log(questionChoice[i] + " is the correct answer yippee : )");
+                nextQuestion();
+            } else {
+                console.log(questionChoice[i] + " is the incorrect answer booo : (");
+                secondsLeft =- 10;
+                nextQuestion();
+            }
+            
         });
 
 //         if (choiceButton === correctAnsw) {
@@ -73,7 +82,7 @@ function displayChoices(currentQuestionIndex){
 }
 
 function countdown (){
-    var secondsLeft = 60;
+    // var secondsLeft = 60;
     var timerInterval = setInterval(function() {
         secondsLeft--;
         timeEl.textContent = secondsLeft;

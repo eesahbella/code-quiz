@@ -11,8 +11,8 @@ var questions = [
         answer: "d. Mondstadt"
     },
     {
-        title: "Which character is known for wielding a bow and is associated with the Geo element?",
-        choices: ["a. Fischl", "b. Tartaglia", "c. Ningguang", "d. Amber"],
+        title: "Which character is known for wielding a catalyst and is associated with the Geo element?",
+        choices: ["a. Fischl", "b. Tartaglia", "c. Ningguang", "d. Gorou"],
         answer: "c. Ningguang"
     },
     {

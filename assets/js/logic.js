@@ -10,7 +10,14 @@ var choices = document.getElementById('choices');
 
 var startScreen = document.getElementById('start-screen');
 
-var correctAnsw = "";
+var timeEl = document.getElementById("time");
+
+var correctAnsw = questions.map(function (item) {
+	return item.answer;
+});
+// console.log(correctAnsw);
+
+
 
 //functions
 
@@ -24,12 +31,13 @@ function startQuiz (){
 function displayQuestion (){
     questionContainer.setAttribute("class", "start");
     questionTitle.textContent = questions[0].title;
-    
-//loop to iterate through the questions:
-    // for (let j = 0; j < questions.length; j++){
-    //     questionIndex = questions[i];
+}
 
-    // }
+function nextQuestion (){
+//loop to iterate through the questions:
+    for (let j = 0; j < questions.length; j++){
+        
+}
 }
 
 function displayChoices(){
@@ -40,20 +48,34 @@ function displayChoices(){
 
     //loop to get the asnwers:
     for (let i = 0; i < Object.keys(questions[i].choices).length; i++) { 
-        choiceButton = document.createElement("button"); // creating a button for each choice
+        var choiceButton = document.createElement("button"); // creating a button for each choice
         choices.append(choiceButton);
         choiceButton.textContent = questions[0].choices[i];
 
+        if (choiceButton === correctAnsw) {
+            choiceButton.addEventListener("click", nextQuestion)
+        } else {
+            choiceButton.addEventListener
+        }
+}
+}
+
+function countdown (){
+    var secondsLeft = 60;
+    var timerInterval = setInterval(function() {
+        secondsLeft--;
+        timeEl.textContent = secondsLeft;
+        if(secondsLeft === 0) {
+          // Stops execution of action at set interval
+          clearInterval(timerInterval);
+        }
     }
-}
-
-function timer (){
-
-}
+, 1000)};
 
 
 //eventListener
 startBtn.addEventListener("click", startQuiz);
+startBtn.addEventListener("click", countdown);
 
 
 

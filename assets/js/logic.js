@@ -67,7 +67,7 @@ function displayChoices(currentQuestionIndex){
                 nextQuestion();
             } else {
                 console.log(questionChoice[i] + " is the incorrect answer booo : (");
-                secondsLeft =- 10;
+                secondsLeft -= 10;
                 nextQuestion();
             }
             

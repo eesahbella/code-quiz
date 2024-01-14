@@ -89,6 +89,9 @@ function countdown (){
         if(secondsLeft === 0) {
           // Stops execution of action at set interval
         clearInterval(timerInterval);
+        endScreen.classList.remove("hide"); 
+        questionContainer.classList.add("hide");
+        // endScreen.textContent = "loser go play genshin";
         }
     }
 , 1000)

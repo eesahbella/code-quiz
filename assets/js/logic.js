@@ -28,8 +28,6 @@ function startQuiz (){
     // startScreen.setAttribute("class", "hide");
     startScreen.classList.add("hide");
     displayQuestion();
-    displayChoices();
-    timer();
 }
 
 function displayQuestion (){
@@ -40,13 +38,7 @@ function displayQuestion (){
 }
 
 function nextQuestion (){
-//loop to iterate through the questions:
-    // for (let j = 0; j < questions.length; j++){
-    //     currentQuestionIndex = questions.title[j];
-    //     if (choiceButton === correctAnsw) {
-    //     currentQuestionIndex++
 
-// }
     currentQuestionIndex ++;
     if (currentQuestionIndex < questions.length) {
         displayQuestion();
@@ -59,7 +51,6 @@ function nextQuestion (){
 
 
 function displayChoices(currentQuestionIndex){
-    
     const questionChoice = questions[currentQuestionIndex].choices;
     choices.innerHTML = "";
     //loop to get the asnwers:
@@ -68,7 +59,7 @@ function displayChoices(currentQuestionIndex){
         choices.appendChild(choiceButton);
         choiceButton.textContent = questionChoice[i];
         choiceButton.addEventListener("click", function() {
-            console.log("Selected choice:", choices[i]);
+            console.log("Selected choice:", questionChoice[i]);
 
             nextQuestion();
         });
@@ -91,7 +82,8 @@ function countdown (){
         clearInterval(timerInterval);
         }
     }
-, 1000)};
+, 1000)
+}
 
 
 //eventListener

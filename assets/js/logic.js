@@ -16,6 +16,10 @@ var endScreen = document.getElementById("end-screen");
 
 var finalScore = document.getElementById('final-score');
 
+var timerContainer = document.getElementById('timer-container');
+
+let timerInterval;
+
 var counter = 0;
 
 // var correctAnsw = questions.map(function (item) {
@@ -32,6 +36,7 @@ var secondsLeft = 60;
 function startQuiz (){
     // startScreen.setAttribute("class", "hide");
     startScreen.classList.add("hide");
+    timerContainer.classList.remove("hide");
     displayQuestion();
 }
 
@@ -52,6 +57,7 @@ function nextQuestion (){
         questionContainer.classList.add("hide");
         endScreen.classList.remove("hide");
         finalResult();
+        clearInterval(timerInterval);
     }
 }
 
@@ -82,10 +88,11 @@ function displayChoices(currentQuestionIndex){
 
 function countdown (){
     // var secondsLeft = 60;
-    var timerInterval = setInterval(function() {
+        timerInterval = setInterval(function() {
         secondsLeft--;
+        if (secondsLeft >= 0){
         timeEl.textContent = secondsLeft;
-        if(secondsLeft === 0) {
+        } else {
           // Stops execution of action at set interval
         clearInterval(timerInterval);
         endScreen.classList.remove("hide"); 
@@ -99,7 +106,7 @@ function countdown (){
 
 
 function finalResult (){
-    finalScore.textContent = "Your final score is " + counter;
+    finalScore.textContent = "Your final score is " + counter + "/5";
 }
 
 //eventListener

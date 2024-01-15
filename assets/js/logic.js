@@ -14,13 +14,16 @@ var timeEl = document.getElementById("time");
 
 var endScreen = document.getElementById("end-screen");
 
+var finalScore = document.getElementById('final-score');
 
-var correctAnsw = questions.map(function (item) {
-	return item.answer;
-});
+var counter = 0;
+
+// var correctAnsw = questions.map(function (item) {
+// 	return item.answer;
+// });
 // console.log(correctAnsw);
 
-var currentQuestionIndex = 0
+var currentQuestionIndex = 0;
 
 var secondsLeft = 60;
 
@@ -48,6 +51,7 @@ function nextQuestion (){
     else {
         questionContainer.classList.add("hide");
         endScreen.classList.remove("hide");
+        finalResult();
     }
 }
 
@@ -64,22 +68,17 @@ function displayChoices(currentQuestionIndex){
             // console.log("Selected choice:", questionChoice[i]);
             if (questionChoice[i] === questions[currentQuestionIndex].answer){
                 console.log(questionChoice[i] + " is the correct answer yippee : )");
+                counter += 1;
                 nextQuestion();
             } else {
                 console.log(questionChoice[i] + " is the incorrect answer booo : (");
                 secondsLeft -= 10;
                 nextQuestion();
             }
-            
-        });
+        })
+    }}
+        
 
-//         if (choiceButton === correctAnsw) {
-//             choiceButton.addEventListener("click", nextQuestion)
-//         } else {
-//             choiceButton.addEventListener
-//         }
-}
-}
 
 function countdown (){
     // var secondsLeft = 60;
@@ -91,6 +90,7 @@ function countdown (){
         clearInterval(timerInterval);
         endScreen.classList.remove("hide"); 
         questionContainer.classList.add("hide");
+        finalResult();
         // endScreen.textContent = "loser go play genshin";
         }
     }
@@ -98,65 +98,12 @@ function countdown (){
 }
 
 
+function finalResult (){
+    finalScore.textContent = "Your final score is " + counter;
+}
+
 //eventListener
 startBtn.addEventListener("click", startQuiz);
 startBtn.addEventListener("click", countdown);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function startTimer(){
-    
-// }
-
-// function displayQuestion (){
-//     const questionContainer = document.getElementById("question-title");
-//     questionContainer.textContent = quizQuestions.question1;
-// }
-
-
-// function startQuiz() {
-//  // Start the timer
-
-//     startTimer();
-
-// // Display the first question
-
-//     displayQuestion();
-//   }
-
-// // Add event listener to the button
-//   const startButton = document.getElementById('start');
-//   startButton.addEventListener('click', startQuiz);

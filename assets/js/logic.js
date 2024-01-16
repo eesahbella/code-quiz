@@ -114,3 +114,21 @@ startBtn.addEventListener("click", startQuiz);
 startBtn.addEventListener("click", countdown);
 
 
+
+// local storage
+
+var submitButton = document.getElementById("submit");
+var initials = document.getElementById("initials");
+
+submitButton.addEventListener("click", submitScore);
+
+function submitScore() {
+    const userInitials = initials.value;
+    const userScore = counter;
+
+    localStorage.setItem("initials", userInitials);
+    localStorage.setItem("score", userScore);
+    console.log(localStorage);
+}
+
+

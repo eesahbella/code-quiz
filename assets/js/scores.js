@@ -1,6 +1,9 @@
-const userInitials = localStorage.getItem("userInitials");
-const userScore = localStorage.getItem("userScore");
+const userInitials = localStorage.getItem("initials");
+const userScore = localStorage.getItem("score");
 
 var scoreContainer = document.createElement("h2");
-body.appendChild(scoreContainer);
-scoreContainer.textContent = "HELLO";
+highscores.appendChild(scoreContainer);
+scoreContainer.innerHTML = "User Initials: " + userInitials + " ; " + "User Score: " + userScore + ".";
+
+// console.log(userInitials);
+// console.log(userScore);git 

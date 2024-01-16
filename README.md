@@ -12,10 +12,10 @@ Welcome to the Genshin Impact Quiz Challenge! This interactive web application a
 * User-friendly interface with a start screen, questions display, and an end screen showing the final score.
 * Ability to store high scores and user initials using local storage.
 
-![quiz screenshot](./assets/ss/ss1.PNG)
-![quiz screenshot](./assets/ss/ss2.PNG)
-![quiz screenshot](./assets/ss/ss3.PNG)
-![quiz screenshot](./assets/ss/ss4.PNG)
+![quiz screenshot](./assets/ss/ss1.png)
+![quiz screenshot](./assets/ss/ss2.png)
+![quiz screenshot](./assets/ss/ss3.png)
+![quiz screenshot](./assets/ss/ss4.png)
 
 ## How to Play
 

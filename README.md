@@ -1,88 +1,40 @@
-# Module 6 Challenge Web APIs: Code Quiz
+# Genshin Impact Quiz
 
-## Your Task
+## Description
 
-As you proceed in your journey to becoming a front-end web developer, it’s likely that you’ll be asked to complete a coding assessment, perhaps as part of an interview process. A typical coding assessment is a combination of multiple-choice questions and interactive coding challenges. 
-
-To help you become familiar with these tests and give you a chance to apply the skills from this module, this week’s challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. This week’s coursework has taught you all the skills you need to succeed in this challenge.
+Welcome to the Genshin Impact Quiz Challenge! This interactive web application allows users to test their knowledge of the popular game Genshin Impact through a timed quiz with multiple-choice questions. Players are challenged to answer questions correctly within the time limit, with incorrect answers resulting in a time penalty.
 
 
-## User Story
+## Features
 
-```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
+* Dynamic quiz with a variety of Genshin Impact-related questions.
+* Timed gameplay to add an element of challenge.
+* User-friendly interface with a start screen, questions display, and an end screen showing the final score.
+* Ability to store high scores and user initials using local storage.
 
-## Acceptance Criteria
+![quiz screenshot](assets/ss/ss1.PNG)
+![quiz screenshot](assets/ss/ss2.PNG)
+![quiz screenshot](assets/ss/ss3.PNG)
+![quiz screenshot](assets/ss/ss4.PNG)
 
-Create a code quiz that contains the following requirements:
+## How to Play
 
-* A start button that when clicked a timer starts and the first question appears.
- 
-  * Questions contain buttons for each answer.
-  * 
-  * When answer is clicked, the next question appears
-  * 
-  * If the answer clicked was incorrect then subtract time from the clock
-
-* The quiz should end when all questions are answered or the timer reaches 0.
-
-  * When the game ends, it should display their score and give the user the ability to save their initials and their score
-  
-## Mock-Up
-
-The following animation demonstrates the application functionality:
-
-![Animation of code quiz. Presses button to start quiz. Clicks the button for the answer to each question, displays if answer was correct or incorrect. Quiz finishes and displays high scores. User adds their intials, then clears their intials and starts over.](./assets/08-web-apis-challenge-demo.gif)
-
-## Grading Requirements
-
-This challenge is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
+* Click the "Start Quiz" button to begin the Genshin Impact Quiz Challenge.
+* Answer each multiple-choice question within the time limit.
+* Incorrect answers result in a time penalty.
+* After completing the quiz, enter your initials and click "Submit" to store your high score.
 
 
-## Review
 
-You are required to submit BOTH of the following for review:
+Enjoy the quiz and test your knowledge of Genshin Impact! 🙂
 
-* The URL of the functional, deployed application.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+https://eesahbella.github.io/multiple-choice-quiz/
 
----
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+
+## References
+
+* HTML, CSS, and JavaScript All-In-One for Dummies (McFedries, P. (2023) ‘4 Building Dynamic Pages with JavaScript’, in HTML, CSS, & javascript: All-in-one. Hoboken, NJ: John Wiley & Sons, Inc. )
+* https://www.w3schools.com/js/default.asp
+* https://www.freecodecamp.org/news/tag/javascript/
+* Xpert Learning Assistant
